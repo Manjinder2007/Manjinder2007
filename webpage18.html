@@ -14,8 +14,40 @@
         <h1>Welcome to Our Project Sharing Platform</h1>
     </header>
     <main>
-     
-      <style>
+       
+
+
+        <div id="voice-chat">
+            <h2>Real-Time Voice Chat</h2>
+            <div id="participants">
+                <h3>Participants</h3>
+                <ul>
+                    <li>User 1</li>
+                    <li>User 2</li>
+                    <li>User 3</li>
+                </ul>
+            </div>
+            <div id="controls">
+                <button id="start-chat">Start Chat</button>
+                <button id="stop-chat">Stop Chat</button>
+                <button id="mute">Mute</button>
+                <button id="unmute">Unmute</button>
+            </div>
+            <audio id="audio-stream" controls></audio>
+        </div>
+        
+       
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="projectFile">Upload yourfiles :</label>
+            <input type="file" id="projectFile" name="projectFile" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt" required>
+            <input type="submit" value="Upload">
+        </form>
+
+
+
+
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -96,36 +128,9 @@
             sendButton.click();
         }
     });
+</script>
 
 
-
-        <div id="voice-chat">
-            <h2>Real-Time Voice Chat</h2>
-            <div id="participants">
-                <h3>Participants</h3>
-                <ul>
-                    <li>User 1</li>
-                    <li>User 2</li>
-                    <li>User 3</li>
-                </ul>
-            </div>
-            <div id="controls">
-                <button id="start-chat">Start Chat</button>
-                <button id="stop-chat">Stop Chat</button>
-                <button id="mute">Mute</button>
-                <button id="unmute">Unmute</button>
-            </div>
-            <audio id="audio-stream" controls></audio>
-        </div>
-        
-       
-
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <label for="projectFile">Upload yourfiles :</label>
-            <input type="file" id="projectFile" name="projectFile" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt" required>
-            <input type="submit" value="Upload">
-        </form>
-        
     </main>
     <footer>
         <p>&copy; 2023 Project Sharing Platform</p>
